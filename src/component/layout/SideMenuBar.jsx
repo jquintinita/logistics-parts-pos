@@ -13,6 +13,7 @@ import settingsIcon from '../../assets/icons/settings.svg';
 import vendorsIcon from '../../assets/icons/vendors.svg';
 import faqIcon from '../../assets/icons/faq.svg';
 import logo from '../../assets/truck-parts-pos-logo.svg';
+import iconlogo from '../../assets/box-logo.svg';
 import {Menu, GripVertical} from 'lucide-react';
 
 const menuItems = [
@@ -118,9 +119,9 @@ export default function SideMenuBar({isOpen , onToggleMenu, isMobile}) {
 
                             <div className="flex items-center justify-center mb-8">
                                 <img
-                                    src={logo}
+                                    src={ isOpen ? logo : iconlogo }
                                     alt="Logo"
-                                    className={`transition-all object-cover object-left duration-300 ${isOpen ? 'w-32' : 'w-15 h-13'}`}
+                                    className={`transition-all object-contain object-left duration-300 ${isOpen ? 'w-32' : 'w-15 h-13'}`}
                                 />
                             </div>
 
