@@ -23,6 +23,7 @@ button{
   --clor-red-500: #FF3520;
   --clor-yellow-500: #F3D94A;
   --color-sky-500:#1BA9F0;
+  --color-zinc-600: #333541;
 }
 .dashboard-layout{
   @media screen and (min-width: 1025px)  {

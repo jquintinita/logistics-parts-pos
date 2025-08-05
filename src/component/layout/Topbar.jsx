@@ -35,7 +35,7 @@ export default function Topbar({ isDark, onToggleDark, isMobile, UserData, produ
                 <div className="flex  flex-none items-center gap-4   ">
                     {/* Notification Bell */}
                     <button className="p-[4px] relative rounded-full overflow-visible bg-gray-300 dark:bg-zinc-800 hover:bg-gray-400 dark:hover:bg-zinc-800">
-                        <Bell className="rounded-4xl inline-block  text-amber-50 p-[6px] dark:bg-gray-600" size={40} />
+                        <Bell className="rounded-4xl inline-block  text-amber-50 p-[6px] dark:bg-gray-600 w-[30px] h-[30px] md:w-[40px] md:h-[40px]" size={40}  />
                         <span className="bg-red-600 absolute right-0 top-0 w-[20px] h-[20px] text-white rounded-4xl flex justify-center place-items-center ">5</span>
                     </button>
                 </div>
@@ -54,7 +54,7 @@ export default function Topbar({ isDark, onToggleDark, isMobile, UserData, produ
                     <img
                         src={userImage}
                         alt="User Avatar"
-                        className="rounded-full w-[48px] h-[48px] object-cover border-2 border-gray-200 dark:border-gray-600"
+                        className="rounded-full w-[38px] h-[38px] md:w-[48px] md:h-[48px] object-cover border-2 border-gray-200 dark:border-gray-600"
                     />
                     <div className='flex pr-8 flex-col justify-center text-gray-900 dark:text-gray-100 bg-gray-300 dark:bg-gray-700  rounded-2xl '>
                         <span className='text-sm tracking-[1px] font-bold'>{UserData.name}</span>

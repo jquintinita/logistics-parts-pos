@@ -44,15 +44,15 @@ export default function SideMenuBar({isOpen , onToggleMenu, isMobile}) {
         )}
     
             {isMobile ? (
-                <div className={`side-menu-bar ${isOpen ? 'open' : 'closed'}  fixed top-0 z-[999] left-0 h-full bg-slate-600 dark:bg-stone-800  transition-all duration-300 w-64 ${isOpen ? 'left-0' : 'left-[-260px]'}`}>
-                    <button onClick={onToggleMenu} className={`top-[50%] translate-y-[-50%] text-center  w-[40px] absolute ${isOpen ? '-right-8  ' : '-right-[40px] '}`}>
-                        <svg width="15" height="15" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" className={` fill-slate-200 absolute -top-[14px] dark:fill-stone-800 ml-0 ${isOpen ? 'left-2 ' : 'left-1 '}`}>
+                <div className={`side-menu-bar ${isOpen ? 'open' : 'closed'}  fixed top-0 z-[999] left-0 h-full bg-slate-600 dark:bg-zinc-600  transition-all duration-300 w-64 ${isOpen ? 'left-0' : 'left-[-260px]'}`}>
+                    <button onClick={onToggleMenu} className={`top-[50%] translate-y-[-50%] text-center  w-[40px] absolute  ${isOpen ? '-right-8  ' : '-right-[40px] '}`}>
+                        <svg width="15" height="15" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" className={` fill-slate-200 absolute -top-[14px] dark:fill-zinc-600 ml-0 ${isOpen ? 'left-[7px] ' : 'left-1 '}`}>
 <path d="M0 0C0 16.8447 13.6553 30.5 30.5 30.5H0V0Z"  />
 </svg>
 
-                        <GripVertical className="text-gray-100 bg-slate-600 dark:text-gray-300 w-[32px] pr-1 h-[60px] dark:bg-stone-800  py-2  rounded-md " size={40} />
+                        <GripVertical className="text-gray-100 bg-slate-600 dark:text-gray-300 w-[32px] pr-1 h-[60px] dark:bg-zinc-600 py-2  rounded-md " size={40} />
 
-                        <svg width="15" height="15" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" className={`fill-slate-600 dark:fill-stone-800 ml-0 absolute -bottom-[14px] ${isOpen ? 'left-2 ' : 'left-1 '}`}>
+                        <svg width="15" height="15" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" className={`fill-slate-600 dark:fill-zinc-600 ml-0 absolute -bottom-[14px] ${isOpen ? 'left-[7px] ' : 'left-1 '}`}>
 <path d="M30.5 0C13.6553 -7.36305e-07 -5.96893e-07 13.6553 -1.3332e-06 30.5L0 -1.3332e-06L30.5 0Z" fill='bg-slate-600 dark:fill-stone-800' />
 </svg>
 
@@ -61,7 +61,7 @@ export default function SideMenuBar({isOpen , onToggleMenu, isMobile}) {
                         <img src={logo} alt="Logo" className="w-32 h-8" />
                     </div>
                     <nav
-                        className={`rounded-[30px] bg-slate-600 dark:bg-stone-800  h-full flex flex-col justify-start 
+                        className={`rounded-[30px] bg-slate-600 dark:bg-zinc-600  h-full flex flex-col justify-start 
                 ${isOpen ? 'px-3 py-8' : 'px-3 py-4'}`}
                     >
                         <div>

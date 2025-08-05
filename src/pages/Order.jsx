@@ -261,7 +261,7 @@ const alertData = [
 const LowInStockData = [
   {
     part_name: "Part Name",
-    sold: "247 Pcs in 10 days",
+    sold: "Sold 247 Pcs in 10 days",
     image: "/assets/products/item-6.png",
     stock: 5,
     optimal: 20,
@@ -270,7 +270,7 @@ const LowInStockData = [
   },
   {
     part_name: "Part Name",
-    sold: "128 Pcs in 10 days",
+    sold: "Sold 128 Pcs in 10 days",
     image: "/assets/products/item-7.png",
     stock: 6,
     optimal: 20,
@@ -279,30 +279,30 @@ const LowInStockData = [
   },
   {
     part_name: "Part Name",
-    sold: "67 Pcs in 10 days",
+    sold: "Sold 67 Pcs in 10 days",
     image: "/assets/products/item-8.png",
     stock: 9,
     optimal: 18,
     Add: 11,
-    part_number: "3425567654321"
+    part_number: "345353565778"
   },
   {
     part_name: "Part Name",
-    sold: "78 Pcs in 10 days",
+    sold: "Sold 78 Pcs in 10 days",
     image: "/assets/products/item-9.png",
     stock: 4,
     optimal: 20,
     Add: 4,
-    part_number: "656543212345"
+    part_number: "345353565778"
   },
   {
     part_name: "Part Name",
-    sold: "54 in 10 days",
+    sold: "Sold 54 in 10 days",
     image: "../assets/products/item-10.png",
     stock: 5,
     optimal: 22,
     Add: 8,
-    part_number: "654223456789"
+    part_number: "345353565778"
   }
 ];
 
@@ -313,7 +313,7 @@ const PricingUpdateData = [
     time: "1 hr 45 min ago",
     vendor: "Automan",
     part_name: "Part name",
-    part_number: "547854123589",
+    part_number: "345353565778",
     price_change: {
       percentage: "10%",
       amount: "$5.00",
@@ -325,7 +325,7 @@ const PricingUpdateData = [
     time: "2 hr 30 min ago",
     vendor: "Automan",
     part_name: "Part name",
-    part_number: "345353565778",
+    part_number: "123213342345",
     price_change: {
       percentage: "5%",
       amount: "$2.50",
@@ -337,7 +337,7 @@ const PricingUpdateData = [
     time: "3 hr 15 min ago",
     vendor: "Automan",
     part_name: "Part name",
-    part_number: "3245567654321",
+    part_number: "45434565778",
     price_change: {
       percentage: "8%",
       amount: "$4.00",
@@ -349,7 +349,7 @@ const PricingUpdateData = [
     time: "4 hr ago",
     vendor: "Automan",
     part_name: "Part name",
-    part_number: "656543212345",
+    part_number: "324523456789",
     price_change: {
       percentage: "12%",
       amount: "$6.00",
@@ -361,7 +361,7 @@ const PricingUpdateData = [
     time: "5 hr 45 min ago",
     vendor: "Automan",
     part_name: "Part name",
-    part_number: "654223456789",
+    part_number: "653241234212",
     price_change: {
       percentage: "15%",
       amount: "$7.50",
