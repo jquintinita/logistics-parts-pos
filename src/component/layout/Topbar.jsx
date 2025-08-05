@@ -10,7 +10,7 @@ export default function Topbar({ isDark, onToggleDark, isMobile, UserData, produ
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     return (
-        <header className="w-full flex flex-none gap-1 items-center justify-between bg-white dark:bg-stone-900 relative z-20 rounded-lg ">
+        <header className="w-full flex flex-none gap-1 items-center justify-between  relative z-20 rounded-lg ">
 
             <div className='flex  items-center gap-4 flex-1'>
                 <div className='w-[40px] h-[40px] flex place-items-center justify-center rounded-4xl bg-gray-300  dark:bg-zinc-800'>

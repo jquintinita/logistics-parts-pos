@@ -52,11 +52,11 @@ export default function TopSlider({ items}){
                     <Slider {...settings}>
                         {items.map((item, i) => (
                         <div key={i} className="px-[2px] w-full">
-                            <div className=" text-white pl-1 pr-2 text-center rounded-md flex justify-start items-center prod-item bg-stone-800 relative">
-                                <div className="prod-img row-span-2"><img src={item.imgurl}/></div>
+                            <div className=" text-white pl-1 pr-2 text-center rounded-md flex justify-start items-center prod-item  bg-gray-300  dark:bg-stone-800 relative">
+                                <div className="prod-img row-span-2 w-[40px]"><img className="w-full" src={item.imgurl}/></div>
                                 <div className="prod-details relative">
-                                    <div className="prod-name text-xs ">{item.name.length > 13 ? item.name.slice(0, 13) + '…' : item.name}  </div>
-                                <div className="prod-brand text-xs"><span className="text-gray-400">Brand:</span> {item.brand}</div>
+                                    <div className="prod-name text-xs text-gray-700 dark:text-gray-100  font-bold">{item.name.length > 13 ? item.name.slice(0, 13) + '…' : item.name}  </div>
+                                    <div className="prod-brand text-xs text-gray-700 dark:text-gray-100 "><span className="text-gray-500  dark:text-gray-400">Brand:</span> {item.brand}</div>
                                 </div>
                                 <Eye size={12} className="top-[2px] right-[2px] absolute w-[16px] h-[16px] rounded-full bg-green-500 text-gray-100 "/>
                             </div>

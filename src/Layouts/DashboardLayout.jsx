@@ -20,7 +20,10 @@ const productsData = [
 ];
 
 export default function DashboardLayout() {
-  const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') === 'dark');
+ const [isDark, setIsDark] = useState(() => {
+    const stored = localStorage.getItem('theme');
+    return stored ? stored === 'dark' : true; // default to dark
+  });
   const [isOpen, setIsOpen] = useState(true);
   const getIsMobile = () => typeof window !== 'undefined' && window.innerWidth < 1025;
   const [isMobile, setIsMobile] = useState(getIsMobile);
