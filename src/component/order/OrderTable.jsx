@@ -1,7 +1,14 @@
 import React from 'react';
-import { Search, MoveLeft, ChevronDown, Ellipsis, Clock , Eye, Printer } from 'lucide-react';
+import { Search, MoveLeft, ChevronDown, Ellipsis, Clock , Eye, Printer, ArrowDownNarrowWide } from 'lucide-react';
 
 export default function OrderTable({ orders }) {
+    const uniqueShops = [
+    ...new Set(
+        orders
+        .filter(order => order.customer?.shop) // safely check
+        .map(order => order.customer.shop)
+    ),
+    ];
     return (
        <div className='overflow-auto max-h-[79vh] overflow-x-auto  scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200 dark:scrollbar-thumb-stone-800 dark:scrollbar-track-zinc-800 relative '>
             <table className="order-table min-w-[1150px] w-full">
@@ -15,37 +22,37 @@ export default function OrderTable({ orders }) {
                                 className="w-full outline-0 text-sm appearance-none table-customer-selector dark:text-gray-100 px-5 py-[10px] rounded-4xl bg-gray-300 dark:bg-stone-800"
                             >
                                 <option value="all">Select Customer</option>
-                                {orders.map((order, index) => (
-                                <option key={index} value={order.customer.shop}>
-                                    {order.customer.shop}
+                                {uniqueShops.map((shop, index) => (
+                                <option key={index} value={shop}>
+                                    {shop}
                                 </option>
                                 ))}
                             </select>
                             </div>
                         </th>
                         <th>
-                            <div className="dark:text-gray-100 px-1  rounded-l-2xl bg-gray-300 dark:bg-stone-800 text-sm">Cus. Type</div>
+                            <div className="dark:text-gray-400 px-1  rounded-l-2xl bg-gray-300 dark:bg-stone-800 text-sm">Cus. Type</div>
                         </th>
                         <th>
-                            <div className="px-1 dark:text-gray-100  bg-gray-300 dark:bg-stone-800 text-sm">Vendors</div>
+                            <div className="px-1 dark:text-gray-400  bg-gray-300 dark:bg-stone-800 text-sm">Vendors</div>
                         </th>
                         <th>
-                            <div className="px-1 dark:text-gray-100  bg-gray-300 dark:bg-stone-800 text-sm">Items</div>
+                            <div className="px-1 dark:text-gray-400  bg-gray-300 dark:bg-stone-800 text-sm">Items</div>
                         </th>
                         <th>
-                            <div className="px-5 dark:text-gray-100  bg-gray-300 dark:bg-stone-800 text-sm">Invoice</div>
+                            <div className="px-5 dark:text-gray-400  bg-gray-300 dark:bg-stone-800 text-sm">Invoice</div>
                         </th>
                         <th>
-                            <div className="px-1 dark:text-gray-100  bg-gray-300 dark:bg-stone-800 text-sm">Payment Status</div>
+                            <div className="px-1 dark:text-gray-400 flex gap-[2px]  bg-gray-300 dark:bg-stone-800 text-sm">Payment Status <ArrowDownNarrowWide  size={16} strokeWidth={3} /></div>
                         </th>
                         <th>
-                            <div className="px-1 dark:text-gray-100  bg-gray-300 dark:bg-stone-800 text-sm">Created</div>
+                            <div className="px-1 dark:text-gray-400  bg-gray-300 dark:bg-stone-800 text-sm">Created</div>
                         </th>
                         <th>
-                            <div className="px-1 dark:text-gray-100  bg-gray-300 dark:bg-stone-800 text-sm">Fulfillment</div>
+                            <div className="px-1 dark:text-gray-400 flex gap-[2px]   bg-gray-300 dark:bg-stone-800 text-sm">Fulfillment <ArrowDownNarrowWide  size={16} strokeWidth={3} /></div>
                         </th>
                         <th>
-                            <div className="dark:text-gray-100  bg-gray-300 dark:bg-stone-800 text-sm">Store Exit</div>
+                            <div className="dark:text-gray-400 flex gap-[2px]  bg-gray-300 dark:bg-stone-800 text-sm">Store Exit Status<ArrowDownNarrowWide  size={16} strokeWidth={3} /></div>
                         </th>
                         <th>
                             <div className="dark:text-gray-100  rounded-r-2xl bg-gray-300 dark:bg-stone-800 text-sm">
