@@ -1,0 +1,357 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+button{
+    cursor: pointer;
+}
+
+@plugin 'tailwind-scrollbar';
+
+@theme inline {
+  --color-orange-500: #C85321;
+  --color-stone-900: #192227;
+  --color-stone-800:#2a2f3b;
+  --color-stone-700:#302F2F;
+  --color-stone-600:#575757;
+  --color-stone-650:#4E4947;
+  --font-sans: "Urbanist", sans-serif;
+  --color-gray-600: #585c6d;
+  --color-gray-500: #7A7C88;
+  --color-zinc-800: #484b58;
+  --color-zinc-750: #222630;
+  --color-green-500: #20B758;
+  --clor-red-500: #FF3520;
+  --clor-yellow-500: #F3D94A;
+  --color-sky-500:#1BA9F0;
+}
+.dashboard-layout{
+  @media screen and (min-width: 1025px)  {
+    > .sidebar-menu{
+      /* flex:  */
+    }
+  }
+}
+
+/* Custom styles for the customer selector arrow chevron */
+.table-customer-selector {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"%3E%3Cpath fill="%23ffffff" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+}
+
+
+  .order-table{
+    th{
+      padding: 2px 0;
+      > div{
+         height: 40px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+    }
+    td{
+      padding: 3px 0;
+    }
+    td > div{
+      font-weight: 700;
+      height: 50px;
+      padding:  5px;
+      display: flex;
+    .createdTime{
+      cursor: pointer;
+    
+      > span{
+        opacity: 0;
+        width: max-content;
+        position: absolute;
+        bottom: 3px;
+        left: -20px;
+        background-color: #585c6d;
+        padding: 2px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+        &:hover{
+          > span{
+            opacity: 1;
+          }
+        }
+    }
+    &.paymentStatus{
+        div{
+
+        &::after{
+          content: '$';
+          position: absolute;
+          bottom: -5px;
+          left: -5px;
+          width: 20px;
+          height: 20px;
+          border-radius: 100%;
+          background-color: var(--color-gray-200 );
+          opacity: 1;
+          display: block;
+          color: var(--color-gray-800);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+        }
+      }
+    }
+    }
+  }
+
+.dark{
+  
+  .order-table{
+    td{
+      padding: 3px 0;
+    }
+    td > div{
+      font-weight: 700;
+      height: 50px;
+      padding:  5px;
+      display: flex;
+    .createdTime{
+      cursor: pointer;
+    
+      > span{
+        opacity: 0;
+        width: max-content;
+        position: absolute;
+        bottom: 3px;
+        left: -20px;
+        background-color: #585c6d;
+        padding: 2px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+        &:hover{
+          > span{
+            opacity: 1;
+          }
+        }
+    }
+    &.paymentStatus{
+        div{
+
+        &::after{
+          content: '$';
+          position: absolute;
+          bottom: -5px;
+          left: -5px;
+          width: 20px;
+          height: 20px;
+          border-radius: 100%;
+          background-color: var(--color-zinc-800 );
+          opacity: 1;
+          display: block;
+          color: var(--color-gray-100);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+        }
+      }
+    }
+    }
+  }
+}
+
+
+.icon-wrench::before {
+  content: url(./assets/icons/wrench.svg);
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+    line-height: 30px;
+}
+
+
+
+
+.icon-car-wrench::before {
+  content: url(./assets/icons/wrench-car.svg);
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+    line-height: 30px;
+  color: inherit; /* Tailwind 'text-*' classes can now color this */
+}
+
+.icon-cars::before {
+  content: url(./assets/icons/cars.svg);
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  line-height: 30px;
+  color: inherit; /* Tailwind 'text-*' classes can now color this */
+}
+
+.topbar-slider{
+  display: flex;
+  flex-wrap: wrap;
+  .slider-wrapper{
+    flex: 0 auto;
+  }
+}
+
+
+.top-slider-component{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  flex: 1 100%;
+  &::after, &::before{
+    content: "";
+  }
+  &:after{
+    clear: both;
+  }
+  .tab-side{
+    float: left;
+    width: calc(20% - 3px);
+    height: 100%;
+    margin-left: 2px;
+    
+  }
+  .slider-side{
+    float: right;
+    width: 80%;
+    height: 100%;
+    
+  }
+
+}
+
+.top-slider{
+  
+  .slick-track {
+  display: flex !important;
+
+}
+
+
+
+.slick-slide > div {
+  width: 100% !important;
+}
+  .slick-slide{
+    > div{
+      line-height: 0;
+    }
+
+  }
+  .slick-arrow{
+    z-index: 9;
+    background-color: var(--color-zinc-800);
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    &:hover, &:active, &:focus{
+       background-color: var(--color-zinc-400);
+    }
+  }
+  .slick-prev{
+    left: -10px !important;
+    &::before{
+       content: "";
+       background-image: url(./assets/icons/chevron-left.svg);
+       width:9px;
+       height: 9px;
+       display: inline-block;
+       background-size: contain;
+       background-position: center;
+    }
+    
+  }
+  .slick-next{
+    right: -10px !important;
+    &::before{
+       content: "";
+       background-image: url(./assets/icons/chevron-left.svg);
+       width:9px;
+       transform: scale(-1);
+       height: 9px;
+       display: inline-block;
+       background-size: contain;
+       background-position: center;
+    }
+  }
+  .slick-dots{
+    bottom: -10px;
+    display: flex !important;
+    gap: 2px;
+    justify-content: center;
+    background-color: var(--color-gray-600);
+    padding: 2px 5px;
+    width: max-content;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    li{
+      width: auto;
+      height: auto;
+      margin: 0;
+      button{
+        width: auto;
+        height: auto;
+        padding: 3px;
+        background: var(--color-stone-900);
+        border-radius: 100%;
+        &::before{
+          content: "";
+          display: none;
+          width: 4px;
+          height: 4px;
+          opacity: 1;
+          background-color: var(--stone-900);
+          display: block;
+        }
+      }
+      &.slick-active{
+         button{
+           background: var(--color-green-500);
+         }
+      }
+    }
+  }
+}
+
+
+
+
+/* .prod-item {
+  display: flex;
+  justify-content: flex-start;
+  .prod-details{}
+} */
+
+
+.user-dropdown{
+   @media screen and (max-width:1800px) {
+    padding-right: 30px;
+  > div{
+     position: absolute;
+      width: 160px;
+      top: 50px;
+      right: 0;
+      padding: 6px 12px;
+
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  }
+  &.close > div{
+     
+      display: none;
+    }
+  }
+  > .darkmode-toggle{
+    @media screen {
+      
+    }
+  }
+}
