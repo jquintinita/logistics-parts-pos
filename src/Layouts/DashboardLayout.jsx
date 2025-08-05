@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import SideMenuBar from '../component/layout/SideMenuBar';
-import Topbar from '../component/layout/topbar';
+import Topbar from '../component/layout/Topbar';
 import TopSlider from '../component/widget/TopSlider';
 import MobileSlider from '../component/widget/MobileSlider';
 
