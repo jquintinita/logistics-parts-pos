@@ -97,7 +97,7 @@ export default function SideMenuBar({isOpen , onToggleMenu, isMobile}) {
                                                 className={`${isOpen ? 'w-5 h5' : 'w-6 h-auto'} object-contain`}
                                                 />
                                             
-                                            {item.icon}
+                                           
                                             <span className={`overflow-hidden transition-all duration-200 ease-in ${isOpen ? "w-full" : " w-0"}`}>{item.name}</span>
                                         </Link>
                                     </li>
