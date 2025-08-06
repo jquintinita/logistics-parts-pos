@@ -20,13 +20,13 @@ export default function Order() {
             {/* Scrollable Tabs */}
             <div className="scrollable-tabs w-full md:w-auto overflow-x-auto whitespace-nowrap">
               <div className="inline-flex gap-2 px-0">
-                <button className="bg-green-500 min-w-[120px] text-white px-6 py-[10px] rounded-3xl hover:bg-green-600 transition-colors text-sm font-bold">
+                <button className="bg-green-500 min-w-0 md:min-w-[120px] text-white px-2 md:px-6 py-[10px] rounded-3xl hover:bg-green-600 transition-colors text-sm font-bold">
                   Orders
                 </button>
-                <button className="bg-gray-600 min-w-[120px] text-white px-6 py-[10px] rounded-3xl hover:bg-green-600 transition-colors text-sm font-bold">
+                <button className="bg-gray-600 min-w-0 md:min-w-[120px] text-white px-2 md:px-6 py-[10px] rounded-3xl hover:bg-green-600 transition-colors text-sm font-bold">
                   Warehouse
                 </button>
-                <button className="bg-gray-600 min-w-[120px] text-white px-6 py-[10px] rounded-3xl hover:bg-green-600 transition-colors text-sm font-bold">
+                <button className="bg-gray-600 min-w-0 md:min-w-[120px] text-white px-2 md:px-6 py-[10px] rounded-3xl hover:bg-green-600 transition-colors text-sm font-bold">
                   Logistics
                 </button>
 
