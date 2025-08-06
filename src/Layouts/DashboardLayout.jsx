@@ -4,7 +4,7 @@ import SideMenuBar from '../component/layout/SideMenuBar';
 import Topbar from '../component/layout/Topbar';
 import TopSlider from '../component/widget/TopSlider';
 import MobileSlider from '../component/widget/MobileSlider';
-
+import widgetIcons from '../assets/icons/widgets.svg';
 const UserData = {
   name: 'Maria Russell',
   role: 'Administrator'
@@ -81,6 +81,10 @@ export default function DashboardLayout() {
           </div>
           <Outlet />
         </main>
+      </div>
+      <div className="fixed  top-1/6 -right-10 bg-[#A358FF]  cursor-pointer hidden lg:flex px-3  items-center py-[1px] gap-1 rounded-tl-lg rounded-tr-lg -rotate-90 shadow-[-5px_2px_10px_1px_rgba(0,_0,_0,_0.8)] z-50">
+          <img src={widgetIcons} alt="Widget Icons" className="w-[13px] h-[13px] " />
+          <span className='text-[10px] text-gray-100 font-bold tracking-[2px]'>WIDGETS</span>
       </div>
     </div>
   );

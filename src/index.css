@@ -27,8 +27,10 @@ button{
 }
 .dashboard-layout{
   @media screen and (min-width: 1025px)  {
-    > .sidebar-menu{
-      /* flex:  */
+    > .side-menu-bar{
+      a{
+       
+      }
     }
   }
 }

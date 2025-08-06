@@ -22,17 +22,17 @@ export default function PricingUpdates({ datas }) {
                     {datas.map((data, index) => (
                         <div key={index} className="alert-item text-gray-700 dark:text-gray-300 rounded-lg bg-gray-200 dark:bg-zinc-800">
                             <div className="w-full flex flex-row gap-1 items-center h-[40px] p-2">
-                                <div className='flex-1 w-full'>
+                                <div className='flex-2/5'>
                                     <div className='w-full flex flex-row items-center pt-2 gap-1 relative pr-[10px]'>
                                          <div className='flex-1/2 text-[10px]/2 font-bold text-gray-500 dark:text-gray-400 pt-[2px]'>Vendor: <span className='text-gray-900 text-xs dark:text-gray-100'> {data.vendor}</span></div>
 
-                                         <div className="part-name text-xs/2 font-bold text-gray-900 dark:text-gray-100 relative break-keep">{data.part_name}   <Eye size={12} className="-top-4 -right-2 absolute w-[16px] h-[16px] rounded-full bg-green-500 text-gray-100 shadow-[0px_4px_6px_3px_rgba(0,_0,_0,_0.3)] "/></div>
-                                        <div className='flex-1/2 text-[10px] dark:text-gray-100 absolute -top-3 -left-1 bg-gray-500 font-bold px-1 py-0.5 rounded-xl'>
+                                         <div className="flex-1/2  part-name text-xs/2 font-bold text-gray-900 dark:text-gray-100 relative break-keep">{data.part_name}   <Eye size={12} className="-top-4 -right-2 absolute w-[16px] h-[16px] rounded-full bg-green-500 text-gray-100 shadow-[0px_4px_6px_3px_rgba(0,_0,_0,_0.3)] "/></div>
+                                        <div className='text-[10px] dark:text-gray-100 absolute -top-3 -left-1 bg-gray-500 font-bold px-1 py-0.5 rounded-xl'>
                                             {data.time}
                                         </div>
                                     </div>
                                 </div>
-                                <div className='flex-none'>
+                                <div className='flex-1/4'>
                                     <div className='w-full flex-col gap-1 text text-[10px] font-bold pr-1 dark:text-gray-400'>
                                         Part Number:
                                         <div className="part-number text-[10px] font-bold text-gray-900 dark:text-gray-100">
@@ -40,7 +40,7 @@ export default function PricingUpdates({ datas }) {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='flex-none'>
+                                <div className='flex-1/4 pr-2'>
                                     <div className={`product-name text-[10px] font-bold text-gray-900 dark:text-gray-100 dark:bg-zinc-900  py-1 rounded-[6px] border-2 relative w-[74px] text-center flex items-center justify-center gap-[2px] ${data.price_change.direction === "up" ? 'border-red-500' : 'border-green-500'}`}> 
                                         {
                                             data.price_change.direction === "up" ? (
@@ -55,7 +55,7 @@ export default function PricingUpdates({ datas }) {
                                         <TableProperties size={16} className="top-[-8px] right-[-4px] absolute w-[16px] h-[16px] bg-gray-200 dark:bg-zinc-800 p-[2px] rounded shadow-[0px_4px_6px_3px_rgba(0,_0,_0,_0.3)]"/>
                                     </div>
                                 </div>
-                                <div className='flex-none'>
+                                <div className='flex-1/4'>
                                     <div className='w-full flex-col gap-1 text text-xs font-bold  '>
                                           <div className="part-number text-[10px] font-bold text-gray-900 dark:text-gray-100">
                                             {data.price_range}

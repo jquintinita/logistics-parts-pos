@@ -12,23 +12,38 @@ import partsIcon from '../../assets/icons/parts.svg';
 import settingsIcon from '../../assets/icons/settings.svg';
 import vendorsIcon from '../../assets/icons/vendors.svg';
 import faqIcon from '../../assets/icons/faq.svg';
+
+
+import activeAccountingIcon from '../../assets/icons/active/accounting-active.svg';
+import activeCustomersIcon from '../../assets/icons/active/customers-active.svg';
+import activeDashboardIcon from '../../assets/icons/active/dashboard-active.svg';
+import activeEmployeeIcon from '../../assets/icons/active/employee-active.svg';
+import activeInventoryIcon from '../../assets/icons/active/inventory-active.svg';
+import activeLocationsIcon from '../../assets/icons/active/locations-active.svg';
+import activeOrdersIcon from '../../assets/icons/active/orders-active.svg';
+import activePartsIcon from '../../assets/icons/active/parts-active.svg';
+import activeSettingsIcon from '../../assets/icons/active/settings-active.svg';
+import activeVendorsIcon from '../../assets/icons/active/vendors-active.svg';
+import activeFaqIcon from '../../assets/icons/active/faq-active.svg';
+import activeArrowToggleIcon from '../../assets/icons/active/arrow-toggle-active.svg';
+
+
 import logo from '../../assets/truck-parts-pos-logo.svg';
 import iconlogo from '../../assets/box-logo.svg';
 import {Menu, GripVertical} from 'lucide-react';
 
 const menuItems = [
-    { name: 'Dashboard', path: '/', icon: dashboardIcon },
-    { name: 'Parts', path: '/parts', icon: partsIcon },
-    { name: 'Locations', path: '/locations', icon: locationsIcon },
-    { name: 'Vendors', path: '/vendors', icon: vendorsIcon },
-    { name: 'Customers', path: '/customers', icon: customersIcon },
-    { name: 'Employees', path: '/employees', icon: employeeIcon },
-    { name: 'Accounting', path: '/accounting', icon: accountingIcon },
-    { name: 'Orders', path: '/order', icon: ordersIcon },
-    { name: 'Inventory', path: '/inventory', icon: inventoryIcon },
-    { name: 'Settings', path: '/settings', icon: settingsIcon }
+    { name: 'Dashboard', path: '/', icon: dashboardIcon, iconActive: activeDashboardIcon },
+    { name: 'Parts', path: '/parts', icon: partsIcon, iconActive: activePartsIcon },
+    { name: 'Locations', path: '/locations', icon: locationsIcon, iconActive: activeLocationsIcon },
+    { name: 'Vendors', path: '/vendors', icon: vendorsIcon, iconActive: activeVendorsIcon },
+    { name: 'Customers', path: '/customers', icon: customersIcon, iconActive: activeCustomersIcon },
+    { name: 'Employees', path: '/employees', icon: employeeIcon, iconActive: activeEmployeeIcon },
+    { name: 'Accounting', path: '/accounting', icon: accountingIcon, iconActive: activeAccountingIcon },
+    { name: 'Orders', path: '/order', icon: ordersIcon, iconActive: activeOrdersIcon },
+    { name: 'Inventory', path: '/inventory', icon: inventoryIcon, iconActive: activeInventoryIcon },
+    { name: 'Settings', path: '/settings', icon: settingsIcon, iconActive: activeSettingsIcon }
 ];
-
 export default function SideMenuBar({isOpen , onToggleMenu, isMobile}) {
     const location = useLocation();
   
@@ -73,21 +88,23 @@ export default function SideMenuBar({isOpen , onToggleMenu, isMobile}) {
                                         <Link
                                             to={item.path}
                                             className={` overflow-hidden rounded-2xl flex items-center ${isOpen ? 'gap-3 px-4 py-3' : 'justify-center p-2 rounded-xl'
-                                                } text-sm  tracking-wide text-gray-200 hover:text-green-500 bg-gray-400 dark:text-gray-100 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-stone-800 font-bold ${location.pathname === item.path ? 'text-green-500 dark:text-green-500 bg-slate-700 dark:bg-stone-800 ' : ''
+                                                } text-sm  tracking-wide text-gray-200  bg-gray-400 dark:text-gray-100 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-stone-800 font-bold ${location.pathname === item.path ? 'text-green-500 dark:text-green-500 bg-slate-700 dark:bg-stone-800 ' : ''
                                                 }`}
                                         >
                                             <img
-                                                src={item.icon}
+                                                src={location.pathname === item.path ? item.iconActive : item.icon}
                                                 alt={`${item.name} icon`}
-                                                className={`${isOpen ? 'w-5 h5' : 'w-6 h-auto'}  object-contain `}
-                                            />
+                                                className={`${isOpen ? 'w-5 h5' : 'w-6 h-auto'} object-contain`}
+                                                />
+                                            
+                                            {item.icon}
                                             <span className={`overflow-hidden transition-all duration-200 ease-in ${isOpen ? "w-full" : " w-0"}`}>{item.name}</span>
                                         </Link>
                                     </li>
                                 ))}
                                 <li>
                                     <button
-                                        className={` overflow-hidden w-full flex   text-sm font-bold text-gray-200 hover:text-green-500   bg-gray-400 dark:text-gray-100 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-stone-800 rounded-2xl ${isOpen ? 'gap-3 px-4 py-3' : 'justify-center p-2 rounded-xl'
+                                        className={` overflow-hidden w-full flex   text-sm font-bold text-gray-200 bg-gray-400 dark:text-gray-100 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-stone-800 rounded-2xl ${isOpen ? 'gap-3 px-4 py-3' : 'justify-center p-2 rounded-xl'
                                             }`}
                                         onClick={onToggleMenu}
                                     >
@@ -132,21 +149,21 @@ export default function SideMenuBar({isOpen , onToggleMenu, isMobile}) {
                                         <Link
                                             to={item.path}
                                             className={` overflow-hidden rounded-2xl flex items-center ${isOpen ? 'gap-3 px-4 py-3' : 'justify-center p-2 rounded-xl'
-                                                } text-sm  tracking-wide text-gray-200 hover:text-green-500 bg-slate-500 dark:text-gray-100 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-stone-800 font-bold ${location.pathname === item.path ? 'text-green-500 dark:text-green-500 bg-slate-700 dark:bg-stone-800 ' : ''
+                                                } text-sm  tracking-wide text-gray-200  bg-slate-500 dark:text-gray-100 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-stone-800 font-bold ${location.pathname === item.path ? 'text-green-500 dark:text-green-500 bg-slate-700 dark:bg-stone-800 ' : ''
                                                 }`}
                                         >
                                             <img
-                                                src={item.icon}
+                                                src={location.pathname === item.path ? item.iconActive : item.icon}
                                                 alt={`${item.name} icon`}
-                                                className={`${isOpen ? 'w-5 h5' : 'w-6 h-auto'}  object-contain `}
-                                            />
+                                                className={`${isOpen ? 'w-5 h5' : 'w-6 h-auto'} object-contain`}
+                                                />
                                             <span className={`overflow-hidden transition-all duration-200 ease-in ${isOpen ? "w-full" : " w-0"}`}>{item.name}</span>
                                         </Link>
                                     </li>
                                 ))}
                                 <li>
                                     <button
-                                        className={` overflow-hidden w-full flex   text-sm font-bold text-gray-200 hover:text-green-500   bg-slate-500 dark:text-gray-100 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-stone-800 rounded-2xl ${isOpen ? 'gap-3 px-4 py-3' : 'justify-center p-2 rounded-xl'
+                                        className={` overflow-hidden w-full flex   text-sm font-bold text-gray-200   bg-slate-500 dark:text-gray-100 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-stone-800 rounded-2xl ${isOpen ? 'gap-3 px-4 py-3' : 'justify-center p-2 rounded-xl'
                                             }`}
                                         onClick={onToggleMenu}
                                     >

@@ -25,7 +25,7 @@ export default function LowInStock({ datas }) {
                     {datas.map((data, index) => (
                         <div key={index} className="alert-item text-gray-700 dark:text-gray-300 rounded-lg bg-gray-200 dark:bg-zinc-800">
                             <div className="w-full flex flex-row gap-1 items-center h-[40px] p-2">
-                                <div className='flex-1 w-full'>
+                                <div className='flex-1/3'>
                                     <div className='w-full flex flex-row items-center gap-2 relative'>
                                         <div className='part-image relative'>
                                             <img src={data.image} alt="Product" className="w-[36px] h-[36px]  object-cover" />
@@ -39,21 +39,21 @@ export default function LowInStock({ datas }) {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='flex-none'>
-                                    <div className='w-full flex-col gap-1 text text-[10px] font-bold pr-1 dark:text-gray-400'>
+                                <div className='flex-1/4'>
+                                    <div className='w-full flex-col gap-1 text text-[10px] font-bold  dark:text-gray-400'>
                                         Part Number:
                                         <div className="part-number text-[10px] font-bold text-gray-900 dark:text-gray-100">
                                             {data.part_number}
                                         </div>
                                     </div>
                                 </div>
-                                <div className='flex-none'>
+                                <div className='flex-1/4 pr-2'>
                                     <div className="product-name text-[10px] font-bold text-gray-900 dark:text-gray-100 dark:bg-zinc-900 px-1 py-1 rounded-[6px] border-2 border-red-500 relative w-[80px] text-center"> 
                                         In stock: {data.stock} Pcs
                                         <TableProperties size={16} className="top-[-8px] right-[-4px] absolute w-[16px] h-[16px] bg-gray-200 dark:bg-zinc-800 p-[2px] shadow-[0px_4px_6px_3px_rgba(0,_0,_0,_0.4)]  rounded "/>
                                     </div>
                                 </div>
-                                <div className='flex-none'>
+                                <div className='flex-1/4 w-1/4'>
                                     <div className='w-full flex-col gap-1 text text-xs font-bold  '>
                                         
                                         <div className="part-number text-[10px] font-bold text-gray-900 dark:text-gray-100">

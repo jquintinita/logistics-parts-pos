@@ -742,8 +742,6 @@ export const LowInStockData = [
   }
 ];
 
-
-
 export const PricingUpdateData = [
   {
     time: "1 hr 45 min ago",
@@ -761,7 +759,7 @@ export const PricingUpdateData = [
     time: "2 hr 30 min ago",
     vendor: "Automan",
     part_name: "Part name",
-    part_number: "123213342345",
+    part_number: "113323523456",
     price_change: {
       percentage: "5%",
       amount: "$2.50",
@@ -773,7 +771,7 @@ export const PricingUpdateData = [
     time: "3 hr 15 min ago",
     vendor: "Automan",
     part_name: "Part name",
-    part_number: "45434565778",
+    part_number: "323234567899", // updated to 12 digits
     price_change: {
       percentage: "8%",
       amount: "$4.00",
@@ -785,7 +783,7 @@ export const PricingUpdateData = [
     time: "4 hr ago",
     vendor: "Automan",
     part_name: "Part name",
-    part_number: "324523456789",
+    part_number: "123123456789", // updated to 12 digits
     price_change: {
       percentage: "12%",
       amount: "$6.00",
@@ -797,7 +795,7 @@ export const PricingUpdateData = [
     time: "5 hr 45 min ago",
     vendor: "Automan",
     part_name: "Part name",
-    part_number: "653241234212",
+    part_number: "434345678901", // updated to 12 digits
     price_change: {
       percentage: "15%",
       amount: "$7.50",
