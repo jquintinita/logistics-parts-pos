@@ -66,7 +66,7 @@ export default function DashboardLayout() {
         onToggleMenu={() => setIsOpen((prev) => !prev)}
         isMobile={isMobile}
       />
-      <div className="page-content  flex-1 flex flex-col  min-w-0 gap-y-4">
+      <div className="page-content  flex-1 flex flex-col  min-w-0 gap-y-2">
       
         <Topbar
           UserData={UserData}

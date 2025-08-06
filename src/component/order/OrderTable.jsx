@@ -10,16 +10,16 @@ export default function OrderTable({ orders }) {
     ),
     ];
     return (
-       <div className='overflow-auto max-h-[79vh] overflow-x-auto  scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200 dark:scrollbar-thumb-stone-800 dark:scrollbar-track-zinc-800 relative '>
+       <div className='overflow-auto max-h-[calc(100vh-182px)] overflow-x-auto  scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200 dark:scrollbar-thumb-stone-800 dark:scrollbar-track-zinc-800 relative '>
             <table className="order-table min-w-[1150px] w-full">
                 <thead className="sticky top-0 z-10 bg-gray-50 dark:bg-zinc-800 ">
                     <tr className="py-1 bg-gray-50 dark:bg-zinc-800">
                         <th colSpan={3}>
-                            <div className="pr-2">
+                            <div className="pr-1">
                             <select
                                 id="customerSelect"
                                 name="customerSelect"
-                                className="w-full outline-0 text-sm appearance-none table-customer-selector dark:text-gray-100 px-5 py-[10px] rounded-4xl bg-gray-300 dark:bg-stone-800"
+                                className="w-full outline-0 text-xs appearance-none table-customer-selector dark:text-gray-100 px-5 py-[10px] rounded-4xl bg-gray-300 dark:bg-stone-800"
                             >
                                 <option value="all">Select Customer</option>
                                 {uniqueShops.map((shop, index) => (
@@ -31,31 +31,31 @@ export default function OrderTable({ orders }) {
                             </div>
                         </th>
                         <th>
-                            <div className="dark:text-gray-400 px-1  rounded-l-2xl bg-gray-300 dark:bg-stone-800 text-sm">Cus. Type</div>
+                            <div className="dark:text-gray-400 px-1  rounded-l-2xl bg-gray-300 dark:bg-stone-800 text-xs">Cus. Type</div>
                         </th>
                         <th>
-                            <div className="px-1 dark:text-gray-400  bg-gray-300 dark:bg-stone-800 text-sm">Vendors</div>
+                            <div className="px-1 dark:text-gray-400  bg-gray-300 dark:bg-stone-800 text-xs">Vendors</div>
                         </th>
                         <th>
-                            <div className="px-1 dark:text-gray-400  bg-gray-300 dark:bg-stone-800 text-sm">Items</div>
+                            <div className="px-1 dark:text-gray-400  bg-gray-300 dark:bg-stone-800 text-xs">Items</div>
                         </th>
                         <th>
-                            <div className="px-5 dark:text-gray-400  bg-gray-300 dark:bg-stone-800 text-sm">Invoice</div>
+                            <div className="px-1 dark:text-gray-400  bg-gray-300 dark:bg-stone-800 text-xs">Invoice</div>
                         </th>
                         <th>
-                            <div className="px-1 dark:text-gray-400 flex gap-[2px]  bg-gray-300 dark:bg-stone-800 text-sm">Payment Status <ArrowDownNarrowWide  size={16} strokeWidth={3} /></div>
+                            <div className="px-1 dark:text-gray-400 flex gap-[2px]  bg-gray-300 dark:bg-stone-800 text-xs">Payment Status <ArrowDownNarrowWide  size={16} strokeWidth={3} /></div>
                         </th>
                         <th>
-                            <div className="px-1 dark:text-gray-400  bg-gray-300 dark:bg-stone-800 text-sm">Created</div>
+                            <div className="px-1 dark:text-gray-400  bg-gray-300 dark:bg-stone-800 text-xs">Created</div>
                         </th>
                         <th>
-                            <div className="px-1 dark:text-gray-400 flex gap-[2px]   bg-gray-300 dark:bg-stone-800 text-sm">Fulfillment <ArrowDownNarrowWide  size={16} strokeWidth={3} /></div>
+                            <div className="px-1 dark:text-gray-400 flex gap-[2px]   bg-gray-300 dark:bg-stone-800 text-xs">Fulfillment <ArrowDownNarrowWide  size={16} strokeWidth={3} /></div>
                         </th>
                         <th>
-                            <div className="dark:text-gray-400 flex gap-[2px]  bg-gray-300 dark:bg-stone-800 text-sm">Store Exit Status<ArrowDownNarrowWide  size={16} strokeWidth={3} /></div>
+                            <div className="dark:text-gray-400 flex gap-[2px]  bg-gray-300 dark:bg-stone-800 text-xs">Store Exit Status<ArrowDownNarrowWide  size={16} strokeWidth={3} /></div>
                         </th>
                         <th>
-                            <div className="dark:text-gray-100  rounded-r-2xl bg-gray-300 dark:bg-stone-800 text-sm">
+                            <div className="dark:text-gray-100  rounded-r-2xl bg-gray-300 dark:bg-stone-800 text-xs">
                                 <button className="dark:text-gray-100 w-[30px] h-[30px] px-1 py-[10px] relative rounded-full flex justify-center place-items-center bg-gray-400 dark:bg-zinc-800 text-sm leading-[30px]">
                                     <Ellipsis className="dark:text-gray-100" size={16} />
                                 </button>

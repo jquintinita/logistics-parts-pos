@@ -15,7 +15,7 @@ export default function Alerts({ alertdata }) {
             </div>
 
             {/* Scrollable container */}
-            <div className="flex-1 max-h-[500px] xl:max-h-[20vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200  dark:scrollbar-thumb-zinc-800 dark:scrollbar-track-stone-800 pr-1">
+            <div className="flex-1 max-h-[500px] xl:max-h-[calc(100vh/3-112px)] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200  dark:scrollbar-thumb-zinc-800 dark:scrollbar-track-stone-800 pr-1">
                 <div className="flex flex-col gap-2 w-full ">
                     {alertdata.map((item, index) => (
                         item.alert_type !== "fire_alarm" ? (

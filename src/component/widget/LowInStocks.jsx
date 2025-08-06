@@ -20,7 +20,7 @@ export default function LowInStock({ datas }) {
             </div>
 
             {/* Scrollable container */}
-            <div className="flex-1  max-h-[500px] xl:max-h-[20vh] overflow-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200  dark:scrollbar-thumb-zinc-800 dark:scrollbar-track-stone-800 pr-1 pt-3">
+            <div className="flex-1  max-h-[calc(100vh/3)]  xl:max-h-[calc(100vh/3-112px)] overflow-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200  dark:scrollbar-thumb-zinc-800 dark:scrollbar-track-stone-800 pr-1 pt-3">
                 <div className="flex flex-col gap-4 w-full min-w-md">
                     {datas.map((data, index) => (
                         <div key={index} className="alert-item text-gray-700 dark:text-gray-300 rounded-lg bg-gray-200 dark:bg-zinc-800">

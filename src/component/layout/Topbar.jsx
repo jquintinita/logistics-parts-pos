@@ -74,8 +74,8 @@ export default function Topbar({ isDark, onToggleDark, isMobile, UserData, produ
                             ""
                         )}
                     </div>
-                    <button onClick={() => setIsDropdownOpen((prev) => !prev)} >
-                        <ChevronDown className={`text-gray-500 dark:text-gray-400 top-[15px] right-2 absolute transition-all duration-100 ${isDropdownOpen ? "rotate-180" : "rotate-0"}`} size={20} />
+                    <button className={`top-[10px] sm:top-[16px] right-2 absolute transition-all duration-100 ${isDropdownOpen ? "rotate-180" : "rotate-0"}`} onClick={() => setIsDropdownOpen((prev) => !prev)} >
+                        <ChevronDown className={`text-gray-500 dark:text-gray-400 `} size={20} />
                     </button>
 
                 </div>
