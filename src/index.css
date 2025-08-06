@@ -200,33 +200,39 @@ button{
   }
 }
 
-
-.top-slider-component{
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  flex: 1 100%;
-  &::after, &::before{
-    content: "";
-  }
-  &:after{
-    clear: both;
-  }
-  .tab-side{
-    float: left;
-    width: calc(14% - 3px);
-    height: 100%;
-    margin-left: 2px;
+.slider-side{
+  @media screen and (min-width: 1563PX)  and (max-width: 1800px) {
+   width: 70%;
     
   }
-  .slider-side{
-    float: right;
-    width: 86%;
+}
+.top-slider-component {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: nowrap; 
+  gap: 2px;
+  .tab-side {
+    flex: 0 0 calc(14% - 2px);
     height: 100%;
+  }
+ .slider-side {
+    flex: 1 1 auto;
+     min-width: 0; 
+  }
+  @media screen and (max-width: 1422px) {
+    .tab-side {
+      flex: 0 0 calc(20% - 2px);
+    }
+    .slider-side {
+      flex: 1 1 auto;
+      min-width: 0; 
+    }
     
   }
 
 }
+
 
 
 .top-slider{
@@ -460,5 +466,51 @@ button{
     @media screen {
       
     }
+  }
+}
+
+
+
+.panel-tab-control{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  @media screen and (max-width: 1590px) {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 8px;
+    & > button{
+      flex-basis: auto;
+      max-width: 210px;
+    }
+    .filters{
+       flex: 100%;
+       width: 100%;
+       > .form{
+        max-width: 100%;
+       }
+       .inline-flex {
+         display: flex;
+          > button{
+            flex: 1;
+          }
+       }
+       @media screen and (max-width: 1298px) {
+        flex-direction: column-reverse;
+        .scrollable-tabs {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+         
+          gap: 8px;
+          > .form{
+            width: 100%;
+            max-width: 100%;
+          }
+
+       }
+    }
+  
+    
   }
 }

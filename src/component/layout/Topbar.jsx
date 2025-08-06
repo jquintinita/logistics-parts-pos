@@ -12,7 +12,7 @@ export default function Topbar({ isDark, onToggleDark, isMobile, UserData, produ
     return (
         <header className="w-full flex flex-none gap-1 items-center justify-between  relative z-20 rounded-lg ">
 
-            <div className='flex  items-center gap-4 flex-1'>
+            <div className='flex  items-center gap-4 flex-1/5 xl:flex-none md:min-w-0 xl:min-w-[136px] 2xl:min-w-[336px]'>
                 <div className='w-[40px] h-[40px] flex place-items-center justify-center rounded-4xl bg-gray-300  dark:bg-zinc-800'>
                     <img
                         src={pinIcon}
@@ -24,18 +24,18 @@ export default function Topbar({ isDark, onToggleDark, isMobile, UserData, produ
             </div>
 
 
-            <div className='flex flex-1  relative justify-end items-center gap-1 lg:gap-2 py-2 '>
+            <div className='flex flex-1 min-w-0  relative justify-end items-center gap-1 lg:gap-2 py-2 '>
 
-               
-                    <div className=' flex-1 hidden xl:flex w-full ' >
-                        <TopSlider items={productsData} />
-                    </div>
-           
+
+                <div className=' flex-1 min-w-0 hidden xl:flex w-full ' >
+                    <TopSlider items={productsData} />
+                </div>
+
 
                 <div className="flex  flex-none items-center gap-4   ">
                     {/* Notification Bell */}
                     <button className="p-[4px] relative rounded-full overflow-visible bg-gray-300 dark:bg-zinc-800 hover:bg-gray-400 dark:hover:bg-zinc-800">
-                        <Bell className="rounded-4xl inline-block  text-amber-50 p-[6px] dark:bg-gray-600 w-[30px] h-[30px] md:w-[40px] md:h-[40px]" size={40}  />
+                        <Bell className="rounded-4xl inline-block  text-amber-50 p-[6px] dark:bg-gray-600 w-[30px] h-[30px] md:w-[40px] md:h-[40px]" size={40} />
                         <span className="bg-red-600 absolute right-0 top-0 w-[20px] h-[20px] text-white rounded-4xl flex justify-center place-items-center ">5</span>
                     </button>
                 </div>

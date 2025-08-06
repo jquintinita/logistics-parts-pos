@@ -14,11 +14,11 @@ export default function Order() {
     
     <div className="flex gap-4 xl:h-full flex-col lg:flex-col xl:flex-row overflow-hidden">
       <div className="rounded-[30px] bg-gray-50 dark:bg-zinc-800 overflow-hidden pl-2 py-2  flex-1 xl:flex-9/12 h-full">
-        <div className='flex flex-col-reverse gap-3 lg:flex-row justify-between place-items-end 2xl:place-items-center pr-2'>
+        <div className='panel-tab-control pr-2 '>
           {/* Tab and Search Bar */}
-          <div className="filters flex flex-wrap   2lx:items-center justify-start gap-3 w-full">
+          <div className="filters flex flex-wrap flex-1 min-w-0  2xl:items-center justify-start gap-3 ">
             {/* Scrollable Tabs */}
-            <div className=" w-full md:w-auto overflow-x-auto whitespace-nowrap">
+            <div className="scrollable-tabs w-full md:w-auto overflow-x-auto whitespace-nowrap">
               <div className="inline-flex gap-2 px-0">
                 <button className="bg-green-500 min-w-[120px] text-white px-6 py-[10px] rounded-3xl hover:bg-green-600 transition-colors text-sm font-bold">
                   Orders
@@ -34,7 +34,7 @@ export default function Order() {
             </div>
 
             {/* Search Form */}
-            <div className="form flex-1 basis-[365px]  2xl:max-w-[365px]">
+            <div className="form flex-1 min-w-0 max-w-[365px] ">
               <form className="rounded-full flex items-center gap-2 px-2 bg-gray-200 dark:bg-stone-800 w-full">
                 <button type="button">
                   <MoveLeft className="text-zinc-900 dark:text-gray-100" size={16} />
@@ -55,7 +55,7 @@ export default function Order() {
           </div>
 
           {/* Create New Order button */}
-          <button className="flex-1 lg:basis-[195px] bg-green-500 text-white px-2 py-[10px] rounded-3xl hover:bg-green-600 transition-colors text-sm flex justify-center gap-2 place-items-center">
+          <button className=" lg:basis-[195px] bg-green-500 text-white px-2 py-[10px] rounded-3xl hover:bg-green-600 transition-colors text-sm flex justify-center gap-2 place-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" className='hidden 2xl:flex' width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M17.5 7.5H16.3167L13.2234 2.08667L11.7767 2.91334L14.3975 7.5H5.60252L8.22419 2.91334L6.77669 2.08667L3.68336 7.5H2.50002C2.24002 7.5 1.99585 7.62167 1.83752 7.8275C1.68002 8.03417 1.62752 8.3025 1.69585 8.5525L4.02836 17.1058C4.22586 17.8292 4.88752 18.3333 5.63669 18.3333H14.3642C15.1125 18.3333 15.7742 17.8292 15.9725 17.1042L18.305 8.55167C18.3734 8.30167 18.3217 8.03334 18.1634 7.82667C18.0042 7.62167 17.76 7.5 17.5 7.5ZM14.3634 16.6667V17.5V16.6667H5.63669L3.59169 9.16667H16.4084L14.3634 16.6667Z" fill="white" />
               <path d="M7.5 10.8333H9.16667V15H7.5V10.8333ZM10.8333 10.8333H12.5V15H10.8333V10.8333Z" fill="white" />

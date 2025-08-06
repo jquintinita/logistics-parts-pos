@@ -14,15 +14,15 @@ export default function TopSlider({ items}){
         slidesToScroll: 1,
         responsive: [
         {
-            breakpoint: 1441,
+            breakpoint: 1660,
             settings: {
             slidesToShow:3
             }
         },
          {
-            breakpoint: 1280,
+            breakpoint: 1398,
             settings: {
-            slidesToShow: 3
+            slidesToShow: 2
             }
         },
          {
@@ -35,7 +35,7 @@ export default function TopSlider({ items}){
         ]
     };
     return (
-         <div className='w-full max-w-[100%] flex flex-row gap-1  top-slider-component'>
+         <div className='w-full max-w-[100%] top-slider-component'>
             <div className='tab-side flex flex-col gap-[1px]'>
                 <div className='flex-1 h-full text-[10px]/4 uppercase flex justify-end items-center gap-1 text-gray-100 bg-green-500 pl-2 font-bold pr-1 rounded-tl-xl'>
                     New Items <span className='bg-zinc-750 w-[20px] h-[14px] inline-block text-center rounded-sm'>26</span>
@@ -47,8 +47,8 @@ export default function TopSlider({ items}){
                     Alerts <span className='bg-red-500 w-[20px] h-[14px] inline-block text-center rounded-sm'>4</span>
                 </div>
             </div>
-            <div className='slider-side bg-gray-50 dark:bg-zinc-800  rounded-r-xl flex-1 '>
-                <div className="top-slider flex-1 w-full max-w-xl xl:max-w-3xl 2xl:max-w-4xl  mx-auto px-3 py-[3px]">
+            <div className='slider-side bg-gray-50 dark:bg-zinc-800  rounded-r-xl  '>
+                <div className="top-slider flex-1 w-full  mx-auto px-3 py-[3px]">
                     <Slider {...settings}>
                         {items.map((item, i) => (
                         <div key={i} className="px-[2px] w-full">
